@@ -4,6 +4,7 @@
   "description": "Experimental repository using Angular 1.x",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build:watch": "./node_modules/.bin/webpack --watch --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/lewie9021/angular-fruit#readme",
   "dependencies": {
-    "angular": "1.5.0"
+    "angular": "1.5.0",
+    "angular-ui-router": "0.2.18"
   },
   "devDependencies": {
     "babel-core": "6.5.2",
