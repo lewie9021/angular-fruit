@@ -1,11 +1,14 @@
 import Angular from "angular";
 import UIRouter from "angular-ui-router";
+import UIBootstrap from "angular-ui-bootstrap";
 import Templates from "./templates";
 import Home from "./screens/home";
 import Basket from "./screens/basket";
+
+import "bootstrap/dist/css/bootstrap.css";
 import "./theme.scss";
 
-Angular.module("main", [UIRouter, Home, Basket])
+Angular.module("main", [UIRouter, UIBootstrap, Home, Basket])
     .config(($stateProvider, $urlRouterProvider) => {
         $urlRouterProvider.otherwise("");
 
