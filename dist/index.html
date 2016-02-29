@@ -7,9 +7,10 @@
         <link rel="stylesheet" type="text/css" href="theme.css" />
     </head>
     <body ng-app="main">
+        <!-- navbar content -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a ui-sref="home" class="navbar-brand">
                     <strong>
                         Angular Fruit
                     </strong>
@@ -17,7 +18,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li id="basket">
-                        <a href="#">
+                        <a ui-sref="basket">
                             <span class="label label-danger pull-right">0</span>
                             <span class="text">Basket</span>
                         </a>
@@ -25,6 +26,8 @@
                 </ul>
             </div>
         </nav>
+
+        <!-- screen content -->
         <div class="container">
             <div ui-view></div>
         </div>
