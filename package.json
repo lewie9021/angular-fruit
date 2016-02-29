@@ -25,7 +25,9 @@
   "homepage": "https://github.com/lewie9021/angular-fruit#readme",
   "dependencies": {
     "angular": "1.5.0",
-    "angular-ui-router": "0.2.18"
+    "angular-ui-bootstrap": "1.2.1",
+    "angular-ui-router": "0.2.18",
+    "bootstrap": "3.3.6"
   },
   "devDependencies": {
     "babel-core": "6.5.2",
@@ -35,7 +37,7 @@
     "babel-preset-stage-2": "6.5.0",
     "css-loader": "0.23.1",
     "extract-text-webpack-plugin": "1.0.1",
-    "file-loader": "^0.8.5",
+    "file-loader": "0.8.5",
     "html-loader": "0.4.3",
     "node-sass": "3.4.2",
     "sass-loader": "3.1.2",

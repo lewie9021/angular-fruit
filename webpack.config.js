@@ -35,8 +35,16 @@ module.exports = {
                 loader: "html"
             },
             {
-                test: /\.(png|jpg|jpeg|gif|svg)$/,
-                loader: "url-loader?limit=10000"
+                test: /\.(woff|woff2)$/,
+                loader: "url?limit=10000"
+            },
+            {
+                test: /\.(ttf|eot|svg)$/,
+                loader: "file"
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                loader: "url?limit=10000"
             },
             {
                 test: /\.s?css$/,
