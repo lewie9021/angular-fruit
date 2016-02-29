@@ -10,7 +10,7 @@ import "./theme.scss";
 
 Angular.module("main", [UIRouter, UIBootstrap, Home, Basket])
     .config(($stateProvider, $urlRouterProvider) => {
-        $urlRouterProvider.otherwise("");
+        $urlRouterProvider.otherwise("/");
 
         $stateProvider
             .state("home", {
