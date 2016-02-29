@@ -1,16 +1,17 @@
 import Angular from "angular";
 import UIRouter from "angular-ui-router";
-import HomeController from "./screens/home/controller";
+import Templates from "./templates";
+import Home from "./screens/home";
 import "./theme.scss";
 
-Angular.module("main", [UIRouter])
-    .config(function($stateProvider, $urlRouterProvider) {
+Angular.module("main", [UIRouter, Home])
+    .config(($stateProvider, $urlRouterProvider) => {
         $urlRouterProvider.otherwise("");
 
         $stateProvider
             .state("home", {
                 url: "/",
-                template: require("./screens/home/view.html"),
-                controller: HomeController
+                template: Templates.home,
+                controller: "HomeCtrl"
             });
     });
