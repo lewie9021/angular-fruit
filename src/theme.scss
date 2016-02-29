@@ -1,5 +1,20 @@
-body {
-    span {
-        color: blue;
+body > .container {
+    margin-top: 64px;
+}
+
+#basket {
+    .label {
+        font-size: 14px;
+    }
+
+    .text {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+}
+
+.product {
+    & > .panel-body {
+        min-height: 192px;
     }
 }
