@@ -7,6 +7,26 @@
         <link rel="stylesheet" type="text/css" href="theme.css" />
     </head>
     <body ng-app="main">
-        <div ui-view></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <strong>
+                        Angular Fruit
+                    </strong>
+                </a>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="basket">
+                        <a href="#">
+                            <span class="label label-danger pull-right">0</span>
+                            <span class="text">Basket</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div ui-view></div>
+        </div>
     </body>
 </html>
