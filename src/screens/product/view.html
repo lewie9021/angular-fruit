@@ -1,1 +1,27 @@
-<h1>Product Template</h1>
+<div id="product" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="image image-background" style="background-image: url('{{imageURL}}');">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="name">
+                            {{name}}
+                        </div>
+                        <hr/>
+
+                        <div class="detail">
+                            <p>{{description}}</p>
+                            <strong>Price: £{{price}}</strong>
+                        </div>
+
+                        <button class="btn btn-lg btn-block btn-success">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
