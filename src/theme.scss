@@ -2,10 +2,6 @@
 @import "./screens/product/style";
 @import "./screens/basket/style";
 
-body > .container {
-    margin-top: 64px;
-}
-
 .navbar {
     .navbar-brand > strong {
         color: white;
@@ -23,19 +19,8 @@ body > .container {
     }
 }
 
-.navbar-brand > strong {
-    color: white;
-}
-
-#basket {
-    .label {
-        font-size: 14px;
-    }
-
-    .text {
-        margin-right: 8px;
-        font-size: 16px;
-    }
+#content {
+    margin-top: 64px;
 }
 
 .image-background {
