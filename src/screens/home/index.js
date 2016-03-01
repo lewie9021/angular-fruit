@@ -1,6 +1,6 @@
 import Angular from "angular";
 import HomeCtrl from "./controller";
-import ProductsModel from "./products";
+import ProductsModel from "../../store/products";
 
 export default Angular
     .module("home", [])
