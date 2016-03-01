@@ -2,6 +2,10 @@ body > .container {
     margin-top: 64px;
 }
 
+.navbar-brand > strong {
+    color: white;
+}
+
 #basket {
     .label {
         font-size: 14px;
@@ -15,6 +19,9 @@ body > .container {
 
 .product {
     & > .panel-body {
-        min-height: 192px;
+        height: 192px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
