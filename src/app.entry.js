@@ -4,11 +4,12 @@ import UIBootstrap from "angular-ui-bootstrap";
 import Templates from "./templates";
 import Home from "./screens/home";
 import Basket from "./screens/basket";
+import Product from "./screens/product";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./theme.scss";
 
-Angular.module("main", [UIRouter, UIBootstrap, Home, Basket])
+Angular.module("main", [UIRouter, UIBootstrap, Home, Basket, Product])
     .config(($stateProvider, $urlRouterProvider) => {
         $urlRouterProvider.otherwise("/");
 
