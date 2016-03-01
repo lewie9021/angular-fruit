@@ -17,11 +17,24 @@ body > .container {
     }
 }
 
+.products a {
+    text-decoration: none;
+}
+
 .product {
-    & > .panel-body {
+    &:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    .image {
         height: 192px;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+
+    .name {
+        color: #337ab7;
     }
 }
