@@ -22,5 +22,10 @@ Angular.module("main", [UIRouter, UIBootstrap, Home, Basket])
                 url: "/basket",
                 template: Templates.basket,
                 controller: "BasketCtrl"
+            })
+            .state("product", {
+                url: "/product/:id",
+                template: Templates.product,
+                controller: "ProductCtrl"
             });
     });
