@@ -1,6 +1,6 @@
 import Angular from "angular";
 import BasketCtrl from "./controller";
-import BasketModel from "./model";
+import BasketModel from "../../store/basket";
 
 export default Angular
     .module("basket", [])

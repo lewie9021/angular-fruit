@@ -29,4 +29,10 @@ Angular.module("main", [UIRouter, UIBootstrap, Home, Basket, Product])
                 template: Templates.product,
                 controller: "ProductCtrl"
             });
+    })
+    .controller("MainCtrl", function($scope, BasketModel) {
+        const total = Object.keys(BasketModel)
+                  .reduce((total, key) => total + BasketModel[key], 0);
+
+        $scope.total = total;
     });
