@@ -1,6 +1,7 @@
 {
   "name": "angular-fruit",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "private": true,
   "description": "Experimental repository using Angular 1.x",
   "scripts": {
     "start": "npm i && npm run build",
