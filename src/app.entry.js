@@ -1,4 +1,5 @@
 import Angular from "angular";
+import LocalStorage from "angular-local-storage";
 import UIRouter from "angular-ui-router";
 import UIBootstrap from "angular-ui-bootstrap";
 import Home from "./screens/home";
@@ -9,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./theme.scss";
 
 const dependencies = [
+    LocalStorage,
     UIRouter,
     UIBootstrap,
     Home,
