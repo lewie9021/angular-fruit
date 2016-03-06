@@ -26,7 +26,6 @@
   "dependencies": {
     "angular": "1.5.0",
     "angular-local-storage": "0.2.6",
-    "angular-ui-bootstrap": "1.2.1",
     "angular-ui-router": "0.2.18",
     "bootstrap": "3.3.6"
   },
