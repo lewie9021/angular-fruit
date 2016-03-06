@@ -1,29 +1,27 @@
 export default function($scope, ProductsModel, BasketModel) {
-    const products = ProductsModel.reduce((map, product) => {
+    const productsMap = ProductsModel.reduce((map, product) => {
         return Object.assign(map, {[product.id]: product});
     }, {});
-    const total = () => {
-        const counts = BasketModel.counts();
-
-        return Object.keys(counts).reduce((total, productID) => {
-            const product = products[productID];
-            const quantity = counts[productID];
-
-            return total + (product.price * quantity);
-        }, 0).toFixed(2);
-    };
 
     $scope.products = Object.keys(BasketModel.counts())
         .map((productID) => {
-            const product = products[productID];
+            const product = productsMap[productID];
 
             return Object.assign({}, product, {
                 price: product.price.toFixed(2),
                 quantity: () => BasketModel.get(productID)
             });
         });
+    $scope.total = () => {
+        const counts = BasketModel.counts();
 
-    $scope.total = total;
+        return Object.keys(counts).reduce((total, productID) => {
+            const product = productsMap[productID];
+            const quantity = counts[productID];
+
+            return total + (product.price * quantity);
+        }, 0).toFixed(2);
+    };
     $scope.add = (productID) => BasketModel.add(productID);
     $scope.remove = (productID) => {
         const count = BasketModel.get(productID);
@@ -31,8 +29,14 @@ export default function($scope, ProductsModel, BasketModel) {
         // Remove product from the list.
         if (count <= 1)
             $scope.products = $scope.products
-                .filter(({id}) => id !== productID);
+            .filter(({id}) => id !== productID);
 
         BasketModel.remove(productID);
+    };
+    $scope.checkout = () => {
+        // Clear the products list.
+        $scope.products = [];
+
+        BasketModel.clear();
     };
 }

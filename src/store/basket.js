@@ -31,6 +31,11 @@ export default function(localStorageService) {
                 delete basket[productID];
 
             save();
+        },
+        clear: () => {
+            basket = {};
+
+            save();
         }
     };
 };
