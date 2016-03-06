@@ -25,7 +25,7 @@ export default function(localStorageService) {
         remove: (productID) => {
             const count = basket[productID];
 
-            if (count)
+            if (count > 1)
                 basket[productID] = count - 1;
             else
                 delete basket[productID];
