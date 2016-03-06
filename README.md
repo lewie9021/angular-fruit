@@ -1,6 +1,6 @@
 # Angular Fruit
 
-A small web application that allows users to purchase their favourite fruit.
+A small web application where users can purchase their favourite fruit.
 
 ### Motivation
 

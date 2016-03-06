@@ -2,7 +2,7 @@
   "name": "angular-fruit",
   "version": "1.0.0",
   "private": true,
-  "description": "Experimental repository using Angular 1.x",
+  "description": "A small web application where users can purchase their favourite fruit.",
   "scripts": {
     "start": "npm i && npm run build",
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
