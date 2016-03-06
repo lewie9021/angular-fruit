@@ -2,16 +2,28 @@
     .product {
         padding: 8px;
 
-        .row > div {
+        .name, .price {
             height: 64px;
             line-height: 64px;
+        }
+
+        .quantity {
+            padding-top: 15px;
+
+            .input-group {
+                width: 120px;
+                margin: 0 auto;
+            }
+
+            input {
+                text-align: center;
+            }
         }
     }
 
     .alert {
         margin-bottom: 0px;
     }
-
 
     #total {
         height: 30px;

@@ -24,18 +24,26 @@
                 <!-- TODO: Convert the following into a directive? -->
                 <li class="list-group-item product" ng-repeat="product in products">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-xs-6 name">
                             <a ui-sref="product({id: product.id})">
                                 <span>{{product.name}}</span>
                                 <div class="image image-background pull-left" style="background-image: url('{{product.imageURL}}')">
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-4 text-center">
+                        <div class="col-xs-4 text-center price">
                             £{{product.price}}
                         </div>
-                        <div class="col-xs-2 text-center">
-                            {{product.quantity}}
+                        <div class="col-xs-2 text-center quantity">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">-</button>
+                                </span>
+                                <input readonly type="text" class="form-control" value="{{product.quantity}}">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">+</button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </li>
