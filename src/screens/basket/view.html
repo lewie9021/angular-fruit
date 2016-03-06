@@ -37,11 +37,11 @@
                         <div class="col-xs-2 text-center quantity">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">-</button>
+                                    <button class="btn btn-default" type="button" ng-click="remove(product.id)">-</button>
                                 </span>
-                                <input readonly type="text" class="form-control" value="{{product.quantity}}">
+                                <input readonly type="text" class="form-control" value="{{product.quantity()}}">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">+</button>
+                                    <button class="btn btn-default" type="button" ng-click="add(product.id)">+</button>
                                 </span>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                 </li>
             </ul>
             <div class="panel-footer clearfix">
-                <strong id="total">Order Total: £{{total}}</strong>
+                <strong id="total">Order Total: £{{total()}}</strong>
                 <button class="btn btn-sm btn-success pull-right">
                     Proceed To Checkout
                 </button>
