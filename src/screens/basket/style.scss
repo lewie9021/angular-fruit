@@ -1,2 +1,19 @@
 #basket.container {
+    .product {
+        padding: 8px;
+
+        .row > div {
+            height: 64px;
+            line-height: 64px;
+        }
+    }
+
+    .alert {
+        margin-bottom: 0px;
+    }
+
+    .image {
+        height: 64px;
+        width: 64px;
+    }
 }
