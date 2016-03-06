@@ -20,9 +20,7 @@ const dependencies = [
 
 Angular.module("app", dependencies)
     .config(($urlRouterProvider) => {
-        // TODO: Figure out how to actually get this to work without
-        // declaring all my routes here.
-        // $urlRouterProvider.otherwise("/");
+        $urlRouterProvider.otherwise("/");
     })
     .controller("NavbarCtrl", ($scope, BasketModel) => {
         // Expose basket total to scope.
