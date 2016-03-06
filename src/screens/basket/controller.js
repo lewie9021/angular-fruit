@@ -1,3 +1,4 @@
-export default function($scope, BasketModel) {
-    console.log("Hello from Basket controller!", $scope, BasketModel);
+export default function($scope, ProductsModel, BasketModel) {
+    console.log("BasketCtrl", ProductsModel, BasketModel.counts());
+
 }

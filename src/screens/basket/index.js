@@ -4,7 +4,7 @@ import BasketView from "./view";
 import BasketCtrl from "./controller";
 
 export default Angular
-    .module("basket", [])
+    .module("app.basket", [])
     .config(($stateProvider) => {
         $stateProvider
             .state("basket", {
@@ -13,6 +13,6 @@ export default Angular
                 controller: "BasketCtrl"
             });
     })
-    .service("BasketModel", BasketModel)
+    .factory("BasketModel", BasketModel)
     .controller("BasketCtrl", BasketCtrl)
     .name;
