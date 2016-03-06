@@ -1,7 +1,6 @@
 var Path = require("path");
 var Webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var NgAnnotatePlugin = require("ng-annotate-webpack-plugin");
 
 var rootPath = __dirname;
 var outputPath = Path.join(rootPath, "dist");
