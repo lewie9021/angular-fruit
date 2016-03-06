@@ -1,13 +1,14 @@
 import Angular from "angular";
 import ProductView from "./view";
 import ProductCtrl from "./controller";
+import Basket from "../basket";
 
 export default Angular
-    .module("app.product", [])
+    .module("app.product", [Basket])
     .config(($stateProvider) => {
         $stateProvider
             .state("product", {
-                url: "product/:id",
+                url: "/product/:id",
                 template: ProductView,
                 controller: "ProductCtrl"
             });
