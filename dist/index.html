@@ -6,9 +6,9 @@
         <script type="text/javascript" src="bundle.js"></script>
         <link rel="stylesheet" type="text/css" href="theme.css" />
     </head>
-    <body ng-app="main" ng-controller="MainCtrl">
+    <body ng-app="app">
         <!-- navbar content -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav ng-controller="NavbarCtrl" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <a ui-sref="home" class="navbar-brand">
                     <strong>
@@ -19,7 +19,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li id="basket">
                         <a ui-sref="basket">
-                            <span class="label label-danger pull-right">{{total}}</span>
+                            <span class="label label-danger pull-right">{{total()}}</span>
                             <span class="text">Basket</span>
                         </a>
                     </li>
