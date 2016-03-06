@@ -25,5 +25,14 @@ export default function($scope, ProductsModel, BasketModel) {
 
     $scope.total = total;
     $scope.add = (productID) => BasketModel.add(productID);
-    $scope.remove = (productID) =>  BasketModel.remove(productID);
+    $scope.remove = (productID) => {
+        const count = BasketModel.get(productID);
+
+        // Remove product from the list.
+        if (count <= 1)
+            $scope.products = $scope.products
+                .filter(({id}) => id !== productID);
+
+        BasketModel.remove(productID);
+    };
 }
