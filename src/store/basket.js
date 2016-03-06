@@ -1,6 +1,8 @@
-export default function() {
-    // TODO: This could look in local storage on intial load.
-    let basket = {};
+export default function(localStorageService) {
+    // Attempt to load from Local Storage before falling back on an empty basket.
+    let basket = localStorageService.get("basket") || {};
+    // Save to Local Storage whenever we modify the basket.
+    const save = () => localStorageService.set("basket", basket);
 
     return {
         counts: () => {
@@ -14,6 +16,8 @@ export default function() {
             const count = basket[productID] || 0;
 
             basket[productID] = count  + 1;
+
+            save();
         },
         remove: (productID) => {
             const count = basket[productID];
@@ -22,12 +26,18 @@ export default function() {
                 return basket[productID] = count - 1;
 
             delete basket[productID];
+
+            save();
         },
         clear: (productID) => {
             delete basket[productID];
+
+            save();
         },
         empty: () => {
             basket = {};
+
+            save();
         }
     };
 };
