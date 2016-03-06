@@ -31,16 +31,6 @@ export default function(localStorageService) {
                 delete basket[productID];
 
             save();
-        },
-        clear: (productID) => {
-            delete basket[productID];
-
-            save();
-        },
-        empty: () => {
-            basket = {};
-
-            save();
         }
     };
 };
