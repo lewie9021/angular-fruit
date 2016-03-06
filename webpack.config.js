@@ -16,7 +16,7 @@ module.exports = {
 
     resolve: {
         root: Path.join(rootPath, "src"),
-        extensions: ["", ".js", ".scss", "css", "html"]
+        extensions: ["", ".js", ".scss", ".css", ".html"]
     },
 
     module: {
