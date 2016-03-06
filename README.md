@@ -36,3 +36,4 @@ I thought the best way to learn the fundamentals of Angular was to create an app
 
 - Store products on a server using MongoDB.
 - Add description to each product.
+- Figure out how to test the application.
