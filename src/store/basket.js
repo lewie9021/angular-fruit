@@ -8,6 +8,9 @@ export default function(localStorageService) {
         counts: () => {
             return basket;
         },
+        get: (productID) => {
+            return basket[productID];
+        },
         total: () => {
             return Object.keys(basket)
                 .reduce((accumulator, key) => accumulator + basket[key], 0);;
@@ -23,9 +26,9 @@ export default function(localStorageService) {
             const count = basket[productID];
 
             if (count)
-                return basket[productID] = count - 1;
-
-            delete basket[productID];
+                basket[productID] = count - 1;
+            else
+                delete basket[productID];
 
             save();
         },
