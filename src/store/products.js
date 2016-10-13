@@ -54,7 +54,7 @@ export default function() {
             imageURL: require("../assets/coconuts.jpg"),
             price: 3.99
         },
-                {
+        {
             id: 10,
             name: "Kumquats",
             imageURL: require("../assets/kumquats.jpg"),
