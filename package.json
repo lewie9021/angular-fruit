@@ -4,7 +4,7 @@
   "private": true,
   "description": "A small web application where users can purchase their favourite fruit.",
   "scripts": {
-    "start": "npm i && npm run build",
+    "start": "yarn && npm run build",
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
     "build:watch": "./node_modules/.bin/webpack --watch --config webpack.config.js"
   },
